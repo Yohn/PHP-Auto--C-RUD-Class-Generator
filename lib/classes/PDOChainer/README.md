@@ -1,3 +1,9 @@
+## Credits
+[@flrnull](https://github.com/flrnull/php-pdo-chainer) for creating the chainer class originally
+
+[@Yohn](https://github.com/Yohn) - flrnull/php-pdo-chainer#1
+
+
 PHP PDO wrappers
 ===========================================
 
