@@ -7,6 +7,7 @@
  * See license text in LICENSE file.
  * 
  * (c) Evgeniy Udodov <flr.null@gmail.com>
+ * DBAL built w/ help from John Brittain III - https://github.com/Yohn
  */
 
 namespace PDOChainer;
