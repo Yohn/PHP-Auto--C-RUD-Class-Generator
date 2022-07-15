@@ -1,0 +1,8 @@
+.vscode/sftp.json
+logins.csv
+.directory
+.Trash-*
+.nfs*
+.fuse_hidden*
+logs
+bootstrap-5.2.0-beta1/
