@@ -1,85 +1,52 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-		<title>PageTitle</title>
+	<head>
+		<title>Create PHP Classes</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-				integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<!-- Bootstrap CSS v5.2.0-beta1 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-		<!-- Convert this to an external style sheet -->
-		<style>
-				body{
-						color:white
-				}
-				#hero {
-						min-height: 100vh;
-						background: #141E30;
-						/* fallback for old browsers */
-						background: -webkit-linear-gradient(to right, #243B55, #141E30);
-						/* Chrome 10-25, Safari 5.1-6 */
-						background: linear-gradient(to right, #243B55, #141E30);
-						/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-				}
-		</style>
-</head>
+	</head>
+	<body>
+		<div class="container">
+			<form class="row" action="php_class.php" method="post" id="create-table">
+				<div class="col-12">
+					<h3>No testing has been completed on this form.</h3>
+					<h4>Only started building the form itself.</h4>
+				</div>
+				<div class="mb-3">
+					<label for="table" class="form-label">SQL Create Table Statement</label>
+					<textarea class="form-control" name="table" id="table" rows="3"></textarea>
+				</div>
+				<div id="create-table-results"></div>
+				<div class="mb-3 row">
+					<div class="offset-sm-4 col-sm-8">
+						<button type="submit" class="btn btn-primary">Create PHP Class</button>
+					</div>
+				</div>
+			</form>
+		</div>
 
-<body>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-				<div class="container-fluid">
-						<a class="navbar-brand" href="#">App Name</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-								aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarCollapse">
-								<ul class="navbar-nav me-auto mb-2 mb-md-0">
-										<li class="nav-item">
-												<a class="nav-link active" aria-current="page" href="#">Home</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link" href="#">About</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link" href="#">Demo</a>
-										</li>
-										<li class="nav-item">
-												<a class="nav-link" href="#">Contact</a>
-										</li>
-								</ul>
-						</div>
-				</div>
-		</nav>
-		<!-- ======= Hero Section ======= -->
-		<main id="hero">
-				<div class="container col-xxl-8 px-4 py-5">
-						<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-								<div class="col-10 col-sm-8 col-lg-6">
-										<img src="https://www.dropbox.com/s/25lk5ur2qvxms7o/AppLandingPage.png?raw=1"
-												class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
-												loading="lazy">
-								</div>
-								<div class="col-lg-6">
-										<h1 class="display-5 fw-bold lh-1 mb-3">Ship great software with our bug tracker</h1>
-										<p class="lead">A simple, fast and scalable bug tracking system that helps you manage bugs easily
-												and deliver great products on time.
-										</p>
-										<div class="d-grid gap-2 d-md-flex justify-content-md-start">
-												<button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Demo</button>
-												<button type="button" class="btn btn-outline-warning btn-lg px-4">About</button>
-										</div>
-								</div>
-						</div>
-				</div>
-		</main>
-		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+		<script>
+			const ct_form = document.getElementById('create-table')
+			ct_form.addEventListener('submit', (e) => {
+				fetch("data.json")
+  				.then(data => {
+    			console.log(data)
+  			}).catch(error => {
+    			// Handle error
+		  	});
+		  });
 		</script>
-</body>
-
+	</body>
 </html>
